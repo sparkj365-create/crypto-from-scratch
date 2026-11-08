@@ -74,3 +74,7 @@ crypto-from-scratch/
 I am more interested in understanding the mechanics than having a perfect API here. There are plenty of good crypto libraries already. Rewriting the algorithms is useful for seeing things like finite-field arithmetic, modular exponentiation, message padding, hash compression rounds, and how RSA gets its keys.
 
 The code is intentionally readable instead of being super optimized.
+
+## Disclaimer
+
+This project is for **educational purposes only**. The implementations are not hardened against side-channel attacks and must not be used to protect real data. For production use, rely on audited libraries such as `cryptography`.
