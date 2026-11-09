@@ -35,3 +35,10 @@ def test_signature():
 
     assert verify_message(message, signature, key.public_key)
     assert not verify_message(b"tampered", signature, key.public_key)
+
+
+def test_prime_product_has_exact_bit_length():
+    from crypto.number_theory import random_prime
+
+    for _ in range(20):
+        assert (random_prime(128) * random_prime(128)).bit_length() == 256

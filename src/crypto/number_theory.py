@@ -110,7 +110,7 @@ def random_prime(bits: int) -> int:
 
     while True:
         candidate = secrets.randbits(bits)
-        candidate |= 1 << (bits - 1)  # make sure the top bit is set
+        candidate |= 3 << (bits - 2)  # set the top two bits so p*q has exactly 2*bits bits
         candidate |= 1                 # and make it odd
 
         if is_probable_prime(candidate):
